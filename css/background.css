@@ -1,0 +1,29 @@
+.row{
+  margin: 0px 0px 0px 0px ;
+}
+.col.s12{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+ 
+.card{
+  margin: 0px 0px 0px 0px ;
+}
+.img-card{
+  width: 100%;
+  background: url(../img/S0594\,DSC_8099a.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 160px; 
+   
+}
+.card-title{
+   padding-top: 50px;
+}
+.center-align.white-text{
+   
+  text-align: center;
+  
+  margin: 0px 0px 0px 0px;
+ }

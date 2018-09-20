@@ -1,0 +1,20 @@
+h1{
+    font-style: initial; 
+    display: block; 
+    text-align: center;    
+}
+span{
+    font-size: 35px;
+    color: blueviolet;
+}
+nav{
+    border: none;
+    height: 100%;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+     
+    padding:  2px 0px 2px;
+    margin: 0px;
+}

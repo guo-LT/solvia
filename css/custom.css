@@ -1,0 +1,29 @@
+/*body{
+    position: relative;
+}*/
+
+nav {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    z-index:1030;
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+    -webkit-box-shadow:none;
+}
+
+#nav-mobile {
+    margin-left: 70%;
+}
+
+.button-collapse {
+    margin-left:90%;
+}
+nav i {
+    display: inline !important;
+}
+
+.card img {
+    max-height: 356px;
+}

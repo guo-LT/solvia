@@ -1,0 +1,26 @@
+#dropdown1{
+    top:-65px;
+    width: 100%;
+}
+.waves-effect{
+    margin-top: 10px;
+    width: 33%;
+    margin-left: 1px;
+    margin-bottom: 10px;
+}
+.collection li span{
+    margin-left: 150px;
+    margin-right: 150px;
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: center;
+}
+span.title{
+    padding-left: 45px;
+}
+span.collectoe{
+    text-align: center;
+}
+div.item{
+    margin-top: 15px;
+}
