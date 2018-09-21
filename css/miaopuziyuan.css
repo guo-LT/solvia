@@ -8,11 +8,9 @@
     margin-left: 1px;
     margin-bottom: 10px;
 }
+
 .collection li span{
-    margin-left: 150px;
-    margin-right: 150px;
-    font-weight: bolder;
-    display: inline-block;
+   display: inline-block;
     vertical-align: center;
 }
 span.title{
@@ -23,4 +21,13 @@ span.collectoe{
 }
 div.item{
     margin-top: 15px;
+}
+#title{
+      margin-left: 13px!important;
+}
+#data{
+    padding-left: 20px;
+}
+collection-item {
+            margin-left: 20px;
 }
