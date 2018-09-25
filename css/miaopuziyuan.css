@@ -1,6 +1,15 @@
-#dropdown1{
-    top:-65px;
-    width: 100%;
+.dropdown-content{
+    display: none;
+    position:absolute;
+}
+i.material-icons{
+	margin: 0px 0px 0px 0px;
+}
+a.dropdown-trigger,a.dropdown-button{
+	padding: 0px 0px 0px 0px;
+}
+.droptown-trigger{
+    position: relative;
 }
 .waves-effect{
     margin-top: 10px;
