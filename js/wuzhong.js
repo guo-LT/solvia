@@ -5,13 +5,7 @@ $(function () {
     $.get('http://cirray.com:8081/species/page/' + page, function (data) {
       console.log(data);
       data.forEach(function (item, index) {
-      //   if(item['district']!==null&&item['town']!==null){
-      // $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
-      //   }else if(item['district']==null){
-      //       $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');  
-      //   }else if(item['town']==null){
-      //       $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');   
-      //   }
+      
         if(item['image']!==null){
           const bk_dir = "http://cirray.ga:8021/static/1. 物种_dup/";
           const images=item['image'].split(";");
