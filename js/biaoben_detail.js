@@ -1,4 +1,6 @@
 $(function(){
+   $(".dropdown-trigger").dropdown();
+
     // console.log(localStorage.getItem('selectedbiaoben'));
       const selectedNO = localStorage.getItem('selectedbiaoben');
      

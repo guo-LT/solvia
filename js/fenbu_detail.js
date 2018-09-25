@@ -1,4 +1,6 @@
  $(function(){
+    $(".dropdown-trigger").dropdown();
+
       const selectedname = localStorage.getItem('selectedfenbu');
       $.get('http://cirray.com:8081/specimen/NO/'+selectedname, function(data){
         console.log(data);

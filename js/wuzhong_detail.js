@@ -1,4 +1,5 @@
 $(function(){
+  $(".dropdown-trigger").dropdown();
 
     const selectedNo = localStorage.getItem('selectedwuzhong');
       $.get('http://cirray.com:8081/species/NO/'+selectedNo, function(data){
