@@ -1,17 +1,23 @@
 $(function () {
-
+  $(".dropdown-trigger").dropdown();
     let page = 1;
     $.get('http://cirray.com:8081/species/page/' + page, function (data) {
       console.log(data);
       data.forEach(function (item, index) {
-        if(item['district']!==null&&item['town']!==null){
-      $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
-        }else if(item['district']==null){
-            $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');  
-        }else if(item['town']==null){
-            $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');   
+      //   if(item['district']!==null&&item['town']!==null){
+      // $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
+      //   }else if(item['district']==null){
+      //       $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');  
+      //   }else if(item['town']==null){
+      //       $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');   
+      //   }
+        if(item['image']!==null){
+          const ori_dir = "http://cirray.ga:8021/static/1. 物种/";
+          const images=item['image'].split(";");
+          $('.collection').append('<li class="collection-item avatar"><img src="'+encodeURI(ori_dir+images[0])+'" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
+        }else{
+          $('.collection').append('<li class="collection-item avatar"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');   
         }
-
         })
   
   
@@ -29,15 +35,14 @@ $(function () {
       $.get('http://cirray.com:8081/species/page/' + page, function (data) {
         console.log(data);
         data.forEach(function (item, index) {
-            if(item['district']!==null&&item['town']!==null){
-          $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
-            }else if(item['district']==null){
-                $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');  
-            }else if(item['town']==null){
-                $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');   
-            }
-
-            })
+          if(item['image']!==null){
+            const ori_dir = "http://cirray.ga:8021/static/1. 物种/";
+            const images=item['image'].split(";");
+            $('.collection').append('<li class="collection-item avatar"><img src="'+encodeURI(ori_dir+images[0])+'" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
+          }else{
+            $('.collection').append('<li class="collection-item avatar"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');   
+          }
+          })
    
        
         $(".collection li").click(function () {
@@ -61,8 +66,14 @@ $(function () {
         $.get('http://cirray.com:8081/species/text/' + criteria, function (data) {
           console.log(data);
           data.forEach(function (item, index) {
-            $('.collection').append('<li class="collection-item avatar"><img src="img/P00714700.jpg" alt="" class="circle"><span class="title"><b>' + item["localname"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["co"] + '</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
-          });
+            if(item['image']!==null){
+              const ori_dir = "http://cirray.ga:8021/static/1. 物种/";
+              const images=item['image'].split(";");
+              $('.collection').append('<li class="collection-item avatar"><img src="'+encodeURI(ori_dir+images[0])+'" alt="" class="circle"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['town']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');
+            }else{
+              $('.collection').append('<li class="collection-item avatar"><span class="title"><b>' + item["chinese"] + '</b></span><span class="NO">' + item["NO"] + '</span><span class="collector">' + item["collector"] + '</span><div><span>' + item["country"] + '</span><span>' + item["prov"] + '</span><span>' + item["city"] + '</span><span>'+item['district']+item['location']+'</span></div><a href="#!" class="secondary-content"><i class="material-icons">send</i></a></li>');   
+            }
+            });
   
           $(".collection li").click(function () {
             let mytext = $(this).find("span.NO").text();

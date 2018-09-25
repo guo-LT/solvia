@@ -1,3 +1,4 @@
+$(function () { 
 $.get('http://cirray.com:8081/distribution/lonlat/', function (data) {
 
   var checkData=data.filter(function(item){
@@ -32,7 +33,7 @@ $.get('http://cirray.com:8081/distribution/lonlat/', function (data) {
 })
  })
 
-
+ 
 
 
 
@@ -51,7 +52,8 @@ $.get('http://cirray.com:8081/distribution/lonlat/', function (data) {
     map.setZoom(15);
 
   })
-
+  
+  
 
 $('#tipinput').keydown(function (event) {
   if (event.which == 13) {
@@ -88,4 +90,9 @@ marker.on('click', function () {
   localStorage.setItem('selectedfenbu', name);
 })
  })
+ 
 
+})
+window.onload=function(){
+  $(".dropdown-trigger").dropdown();
+}

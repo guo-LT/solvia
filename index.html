@@ -16,10 +16,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     
   <script type="text/javascript">
-   	document.addEventListener('DOMContentLoaded', function() {
-var elems = document.querySelectorAll('.slider');
-var instances = M.Slider.init(elems, {'hight' : 770, 'indicators' : true,'interval':2000,'transition':200});
-});
+  $(function () { 
+      $(".dropdown-trigger").dropdown();
+       })
+  //  $(".dropdown-trigger").dropdown();
+  document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.slider');
+      var instances = M.Slider.init(elems, {'hight' : 770, 'indicators' : true,'interval':2000,'transition':200});
+}); 
+
+
 </script>
 </head>
 <body>
@@ -36,6 +42,13 @@ var instances = M.Slider.init(elems, {'hight' : 770, 'indicators' : true,'interv
       </div>
     </div>
   </div>
+  <ul id="dropdown1" class="dropdown-content">
+    <li id="1"><a href="miaopu-1.html">活植物</a></li>
+    <li class="divider"></li>
+    <li id="2"><a href="miaopu-2.html">种子</a></li>
+    <li class="divider"></li>
+    <li id="3"><a href="miaopu-3.html">黄芩属</a></li>
+  </ul>
   <nav>
     <div class="nav-wrapper purple lighten-3" >
       <div class="col s12">
@@ -45,7 +58,7 @@ var instances = M.Slider.init(elems, {'hight' : 770, 'indicators' : true,'interv
           <li class="col s1"><a href="wuzhong.html">物种</a></li>
           <li class="col s1"><a href="biaoben.html">标本</a></li>
           <li class="col s1"><a href="fenbu.html">分布</a></li>
-        <li class="col s1"><a href="ziyuan.html">苗圃资源库</a></li>
+          <li><a class="col s1 dropdown-trigger" href="#!" data-target="dropdown1">苗圃资源库<i class="material-icons right">arrow_drop_down</i></a></li>
         <li class="col s1"><a href="zajiao.html">杂交选育</a></li>
         <li class="col s1"><a href="yanjiu.html">研究考察</a></li>
         <li class="col s1"><a href="video.html">影像</a></li>

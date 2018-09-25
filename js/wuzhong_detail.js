@@ -18,7 +18,7 @@ $(function(){
         
           imgs.forEach(function(item,index){
               
-              $(".resources").append('<div class="col s3"><div class="card"><div class="card-image"><img src='+(bk_dir+item)+'></div><div class="card-action"><a target="_blank" href='+(ori_dir+item)+'>查看原图</a></div></div></div>');
+              $(".resources").append('<div class="col s3"><div class="card"><div class="card-image"><img src='+encodeURI(bk_dir+item)+'></div><div class="card-action"><a target="_blank" href='+encodeURI(ori_dir+item)+'>查看原图</a></div></div></div>');
           console.log(bk_dir+item); 
         });
           

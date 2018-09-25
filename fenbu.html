@@ -16,42 +16,50 @@
   <script src="https://webapi.amap.com/js/marker.js"></script>
   <script src=" https://code.jquery.com/jquery-3.3.1.min.js"> </script>
   <script type="text/javascript" src="js/fenbu.js"></script>
+  
 </head>
 
 <body>
-  <div class="container">
+  <div class="container"> 
     <div class="row">
       <div class="col s12">
         <div class="card">
           <div class="img-card">
-            <div class="card-title">
-              <p class="center-align white-text">鼠 尾 草 属 植 物 种 质 资 源 信 息 库</p>
-              <p class="center-align white-text">Salvia Germplasm Resources Database</p>
-            </div>
+          <div class="card-title">
+            <p class="center-align white-text">鼠 尾 草 属 植 物 种 质 资 源 信 息 库</p>
+            <p class="center-align white-text">Salvia Germplasm Resources Database</p>
           </div>
         </div>
       </div>
     </div>
-    <nav>
-      <div class="nav-wrapper purple lighten-3">
-        <a href="#" class="brand-logo left ">Salvia</a>
+  </div>
+  <ul id="dropdown1" class="dropdown-content">
+    <li id="1"><a href="miaopu-1.html">活植物</a></li>
+    <li class="divider"></li>
+    <li id="2"><a href="miaopu-2.html">种子</a></li>
+    <li class="divider"></li>
+    <li id="3"><a href="miaopu-3.html">黄芩属</a></li>
+  </ul>
+  <nav>
+    <div class="nav-wrapper purple lighten-3" >
+      <div class="col s12">
+        <a href="#!" class="brand-logo left col s2">Salvia</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="index.html">主页</a></li>
-          <li><a href="wuzhong.html">物种</a></li>
-          <li><a href="biaoben.html">标本</a></li>
-          <li class="active"><a href="fenbu.html">分布</a></li>
-          <li><a href="ziyuan.html">苗圃资源库</a></li>
-          <li><a href="zajiao.html">杂交选育</a></li>
-          <li><a href="yanjiu.html">研究考察</a></li>
-          <li><a href="video.html">影像</a></li>
-          <li><a href="wenxian.html">文献资料</a></li>
-          <li page="index11.html"><a id="unamebtn" class="dropdown-button " data-activates="dropdown1" href="#!"><span>未登录</span><i
-                class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
-    <div id="container"></div>
+          <li class="col s1"><a href="index.html">主页</a></li>
+          <li class="col s1 "><a href="wuzhong.html">物种</a></li>
+          <li class="col s1 "><a href="biaoben.html">标本</a></li>
+          <li class="col s1 active"><a href="fenbu.html">分布</a></li>
+          <li><a class="dropdown-trigger" href="ziyuan.html" data-target="dropdown1">苗圃资源库<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li class="col s1"><a href="zajiao.html">杂交选育</a></li>
+        <li class="col s1"><a href="yanjiu.html">研究考察</a></li>
+        <li class="col s1"><a href="video.html">影像</a></li>
+        <li class="col s1"><a href="wenxian.html">文献资料</a></li>
+      <li  page="index11.html" class="col s1"><a id="unamebtn" class="dropdown-button" data-activates="dropdown1" href="#"><span>未登录</span><i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+   </div>
+    <a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
+  </div>  
+</nav>    <div id="container"></div>
     <div id="myPageTop" class=" right">
       <input id="tipinput" class="validate left-align" placeholder="请输入物种名或地名" />
       <div id="panel" class="highlight"></div>
@@ -59,10 +67,13 @@
     
   </div>
   <script type="text/javascript">
+ 
+
     var map = new AMap.Map('container', {
       resizeEnable: true,
       zoom:4
     });
+  
     
 </script>
 </body>

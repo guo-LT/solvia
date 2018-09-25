@@ -1,4 +1,6 @@
 $(function () {
+  $(".dropdown-trigger").dropdown();
+
   let page =1;
    $.get('http://cirray.com:8081/specimen/page/' + page, function (data) {
      console.log(data);
