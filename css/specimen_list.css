@@ -1,5 +1,7 @@
 .collection li span {
     margin-left: 40px;
+    position: relative;
+   
 }
 /* i.right{
     margin: 0px 0px 0px 0px;
