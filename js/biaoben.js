@@ -95,7 +95,7 @@ $(function () {
            $(".collection li").click(function () {
              let mytext = $(this).find("span.NO").text();
              console.log(mytext);
-             window.location.href = "wuzhong_detail.html";
+             window.location.href = "biaoben_detail.html";
              window.history.go(-1);
              localStorage.setItem('selectbiaoben', mytext);
            });
